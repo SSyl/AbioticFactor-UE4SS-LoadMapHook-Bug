@@ -35,6 +35,49 @@ All 10 test mods (HookModA through HookModJ) register all 4 hooks successfully:
 **Expected:** All 10 mods print "fired!" for all 4 hook types
 **Actual:** Only HookModA prints "fired!" for LoadMap hooks; all 10 print for InitGameState hooks
 
+## Sample Output
+
+```
+[Lua] [Hook Mod A] Loading...
+[Lua] [Hook Mod A] RegisterLoadMapPreHook pcall success
+[Lua] [Hook Mod A] RegisterLoadMapPostHook pcall success
+[Lua] [Hook Mod A] RegisterInitGameStatePreHook pcall success
+[Lua] [Hook Mod A] RegisterInitGameStatePostHook pcall success
+[Lua] [Hook Mod A] Mod loaded
+...
+[Lua] [Hook Mod J] Loading...
+[Lua] [Hook Mod J] RegisterLoadMapPreHook pcall success
+[Lua] [Hook Mod J] RegisterLoadMapPostHook pcall success
+[Lua] [Hook Mod J] RegisterInitGameStatePreHook pcall success
+[Lua] [Hook Mod J] RegisterInitGameStatePostHook pcall success
+[Lua] [Hook Mod J] Mod loaded
+
+[Lua] [Hook Mod A] RegisterLoadMapPreHook fired!        <-- Only A fires
+
+[Lua] [Hook Mod A] RegisterInitGameStatePreHook fired!  <-- All 10 fire
+[Lua] [Hook Mod B] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod C] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod D] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod E] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod F] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod G] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod H] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod I] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod J] RegisterInitGameStatePreHook fired!
+[Lua] [Hook Mod A] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod B] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod C] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod D] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod E] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod F] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod G] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod H] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod I] RegisterInitGameStatePostHook fired!
+[Lua] [Hook Mod J] RegisterInitGameStatePostHook fired!
+
+[Lua] [Hook Mod A] RegisterLoadMapPostHook fired!       <-- Only A fires
+```
+
 ## Environment
 
 - **Game:** Abiotic Factor v1.2.0
