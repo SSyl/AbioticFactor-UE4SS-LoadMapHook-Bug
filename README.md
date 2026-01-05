@@ -12,7 +12,7 @@ When multiple Lua mods register `RegisterLoadMapPreHook` or `RegisterLoadMapPost
 - **pcall wrapper** - Wrapped registration in pcall to catch silent failures (all report success)
 - **ExecuteWithDelay** - Delayed registration by 1000ms, 5000ms, 10000ms (no effect)
 - **Default mods enabled/disabled** - Tested with and without shipped UE4SS mods (BPModLoaderMod uses `RegisterLoadMapPostHook`)
-- **Stable vs Experimental** - Bug exists in both; Experimental has additional regression where `RegisterLoadMapPostHook` doesn't fire at all when BPModLoaderMod is enabled
+- **NexusMods Version vs Latest Experimental** - Bug exists in both; Experimental has additional regression where `RegisterLoadMapPostHook` doesn't fire at all when BPModLoaderMod is enabled
 
 ## Results
 
